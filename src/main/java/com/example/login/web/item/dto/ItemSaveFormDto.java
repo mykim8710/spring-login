@@ -1,4 +1,4 @@
-package com.example.login.web.validation.formdto;
+package com.example.login.web.item.dto;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;

@@ -1,9 +1,8 @@
-package com.example.login.web.validation.formdto;
+package com.example.login.web.item.dto;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
