@@ -13,7 +13,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import java.util.Locale;
 
 @Configuration
-public class I18nConfig implements WebMvcConfigurer {
+public class MessageConfig implements WebMvcConfigurer {    // I18n
 
     /**
      * AcceptHeaderLocaleResolver : Http 헤더의 Accept-Language의 값을 사용한다. (기본값)

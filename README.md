@@ -23,3 +23,11 @@
     - 직접 SessionManager정의 후 적용
     - 서블릿 HTTP 세션 : HttpSession적용
 - 세션 타임아웃 설정
+- 서블릿 필터 로그인 적용
+  - 전체 요청에 대한 log 남기는 filter 구현
+  - 로그인 여부 체크하는 filter 구현
+- 인터셉터 로그인 적용
+  - 전체 요청에 대한 log 남기는 filter 구현
+  - 로그인 여부 체크하는 filter 구현
+- ArgumentResolver 활용
+  - 구현한 ArgumentResolver가 동작해서 자동으로 세션에 있는 로그인 회원을 찾아주고, 만약 세션에 없다면 null을 반환
