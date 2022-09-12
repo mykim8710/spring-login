@@ -1,4 +1,4 @@
-package com.example.login.domain.item;
+package com.example.login.domain.item.model;
 
 import lombok.Data;
 

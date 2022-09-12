@@ -1,9 +1,9 @@
-package com.example.login.web.item;
+package com.example.login.web.item.controller;
 
-import com.example.login.domain.item.Item;
-import com.example.login.domain.item.ItemRepository;
-import com.example.login.web.item.dto.ItemSaveFormDto;
+import com.example.login.domain.item.model.Item;
+import com.example.login.domain.item.repository.ItemRepository;
 import com.example.login.web.item.dto.ItemUpdateFormDto;
+import com.example.login.web.item.dto.ItemSaveFormDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -26,20 +26,20 @@ public class ItemController {
     public String items(Model model) {
         List<Item> items = itemRepository.findAll();
         model.addAttribute("items", items);
-        return "itemView/items";
+        return "items/items";
     }
 
     @GetMapping("/{itemId}")
     public String item(@PathVariable long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
-        return "itemView/item";
+        return "items/item";
     }
 
     @GetMapping("/add")
     public String addForm(Model model) {
         model.addAttribute("item", new Item());
-        return "itemView/addForm";
+        return "items/addForm";
     }
 
     @PostMapping("/add")
@@ -48,7 +48,7 @@ public class ItemController {
 
         if (bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
-            return "itemView/addForm";
+            return "items/addForm";
         }
 
         // 성공로직
@@ -68,7 +68,7 @@ public class ItemController {
     public String editForm(@PathVariable Long itemId, Model model) {
         Item item = itemRepository.findById(itemId);
         model.addAttribute("item", item);
-        return "itemView/editForm";
+        return "items/editForm";
     }
 
     @PostMapping("/{itemId}/edit")
@@ -77,7 +77,7 @@ public class ItemController {
 
         if (bindingResult.hasErrors()) {
             log.info("errors={}", bindingResult);
-            return "itemView/editForm";
+            return "items/editForm";
         }
 
         // 성공로직

@@ -1,7 +1,7 @@
 package com.example.itemservice.domain.item;
 
-import com.example.login.domain.item.Item;
-import com.example.login.domain.item.ItemRepository;
+import com.example.login.domain.item.model.Item;
+import com.example.login.domain.item.repository.ItemRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

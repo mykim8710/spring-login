@@ -1,6 +1,6 @@
 package com.example.itemservice.validation;
 
-import com.example.login.domain.item.Item;
+import com.example.login.domain.item.model.Item;
 import org.junit.jupiter.api.Test;
 
 import javax.validation.ConstraintViolation;
